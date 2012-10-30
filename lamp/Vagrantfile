@@ -1,6 +1,6 @@
 Vagrant::Config.run do |config|
 
-  config.vm.host_name = "lamp-dev"
+  config.vm.host_name = "lamp"
 
   # Our packaged basebox should be based of Ubuntu 12.04 64bit.
 

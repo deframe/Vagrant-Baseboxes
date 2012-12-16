@@ -1,4 +1,4 @@
-Alias /apc.php /usr/share/doc/php-apc/apc.php
+Alias /apc /usr/share/doc/php-apc/apc.php
 
 <Directory /usr/share/doc/php-apc/>
     order allow,deny

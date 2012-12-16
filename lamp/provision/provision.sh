@@ -119,7 +119,7 @@ if ! packageInstalled "php-apc" && packageInstalled "php5"; then
     apt-get -y install php-apc
     if packageInstalled "php-apc" && [ -f "/usr/share/doc/php-apc/apc.php.gz" ]; then
         gunzip /usr/share/doc/php-apc/apc.php.gz
-        sleep 1
+        sleep 5
         sed -i "s/defaults[(]'USE_AUTHENTICATION',1[)];/defaults('USE_AUTHENTICATION',0);/g" /usr/share/doc/php-apc/apc.php
         cp /vagrant/provision/templates/etc/apache2/conf.d/apc /etc/apache2/conf.d/apc
         service apache2 restart

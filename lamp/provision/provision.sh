@@ -102,6 +102,9 @@ if ! packageInstalled "php5" && packageInstalled "apache2"; then
     apt-get -y install php5
     if packageInstalled "php5"; then
         find / -name php.ini | xargs sed -i "s/;\s*date.timezone\s*=\s*/date.timezone = Europe\/London/g"
+        mkdir /usr/share/phpinfo
+        echo "<?php phpinfo();" > /usr/share/phpinfo/phpinfo.php
+        cp /vagrant/provision/templates/etc/apache2/conf.d/phpinfo /etc/apache2/conf.d/phpinfo
     fi
 fi
 

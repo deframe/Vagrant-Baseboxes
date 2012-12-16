@@ -1,0 +1,6 @@
+Alias /phpinfo /usr/share/phpinfo/phpinfo.php
+
+<Directory /usr/share/phpinfo/>
+    order allow,deny
+    allow from all
+</Directory>

@@ -1,8 +1,8 @@
 <VirtualHost *:80>
 
-    DocumentRoot /web/default
+    DocumentRoot /var/www
 
-    <Directory /web/default/>
+    <Directory /var/www/>
         Options FollowSymLinks MultiViews
         AllowOverride All
         Order allow,deny

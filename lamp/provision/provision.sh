@@ -75,9 +75,8 @@ if ! packageInstalled "apache2"; then
         echo "" >> /etc/apache2/apache2.conf
         echo "# Set Application Environment" >> /etc/apache2/apache2.conf
         echo "SetEnv ENVIRONMENT_TYPE development" >> /etc/apache2/apache2.conf
-        a2enmod rewrite
-        mkdir -p /web/default
-        echo "<h1>There's nothing here yet!</h1><p>Try creating a website...</p>" > /web/default/index.html
+        a2enmod rewrite        
+        echo "<h1>There's nothing here yet!</h1><p>Try creating a website...</p>" > /var/www/index.html
         chown -R vagrant:vagrant /web
         cp -f /vagrant/provision/templates/etc/apache2/sites-available/default /etc/apache2/sites-available/default
         rm /etc/apache2/sites-available/default-ssl

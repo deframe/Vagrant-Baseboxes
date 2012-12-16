@@ -1,4 +1,4 @@
-Alias /phpinfo /usr/share/phpinfo/phpinfo.php
+Alias /vm-admin/phpinfo /usr/share/phpinfo/phpinfo.php
 
 <Directory /usr/share/phpinfo/>
     order allow,deny

@@ -1,0 +1,6 @@
+Alias /vm-admin/phpMyAdmin /usr/share/phpmyadmin
+
+<Directory /usr/share/phpmyadmin/>
+    order allow,deny
+    allow from all
+</Directory>

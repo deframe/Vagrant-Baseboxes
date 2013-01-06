@@ -15,6 +15,7 @@ Thumbs.db
 .buildpath
 .settings/
 
-# Exclude .vagrant file
+# Exclude .vagrant and package.box files
 
 .vagrant
+package.box

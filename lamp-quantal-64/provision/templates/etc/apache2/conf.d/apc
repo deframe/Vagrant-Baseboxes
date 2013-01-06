@@ -1,0 +1,6 @@
+Alias /vm-admin/apc /usr/share/doc/php-apc/apc.php
+
+<Directory /usr/share/doc/php-apc/>
+    order allow,deny
+    allow from all
+</Directory>

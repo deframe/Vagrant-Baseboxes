@@ -1,11 +1,11 @@
 Vagrant::Config.run do |config|
 
-  config.vm.host_name = "lamp-dev"
+  config.vm.host_name = "lamp"
 
-  # Our packaged basebox should be based of Ubuntu 12.10 64bit.
+  # Our packaged basebox should be based of Ubuntu 12.04 32bit.
 
-  config.vm.box = "quantal64"
-  config.vm.box_url = "https://github.com/downloads/roderik/VagrantQuantal64Box/quantal64.box"
+  config.vm.box = "precise32"
+  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
   # Initialize host-only networking.
 

@@ -1,0 +1,21 @@
+# Exclude operating system generated files
+
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Exclude PhpStorm IDE project files
+
+.idea/
+
+# Exclude Zend Studio / Eclipse IDE project files
+
+.project
+.buildpath
+.settings/
+
+# Exclude .vagrant and package.box files
+
+.vagrant
+package.box

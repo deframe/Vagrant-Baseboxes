@@ -130,6 +130,10 @@ if ! packageInstalled "php5-curl" && packageInstalled "php5"; then
     apt-get -y install php5-curl
 fi
 
+if ! packageInstalled "php5-gd" && packageInstalled "php5"; then
+    apt-get -y install php5-gd
+fi
+
 if ! packageInstalled "php5-intl" && packageInstalled "php5"; then
     apt-get -y install php5-intl
 fi

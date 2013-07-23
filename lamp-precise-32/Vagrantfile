@@ -1,24 +1,18 @@
-Vagrant::Config.run do |config|
+Vagrant.configure("2") do |config|
 
-  config.vm.host_name = "lamp"
+  config.vm.hostname = "lamp"
 
   # Our packaged basebox should be based of Ubuntu 12.04 32bit.
 
   config.vm.box = "precise32"
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
-  # Initialize host-only networking.
-
-  config.vm.network :hostonly, "10.0.1.10"
-
   # Forward HTTP requests.
 
-  config.vm.forward_port 80, 8080
+  config.vm.network :forwarded_port, guest: 80, host: 8080
 
   # Provision the box with a shell script.
-
-  Vagrant::Config.run do |config|
-    config.vm.provision :shell, :path => "provision/provision.sh"
-  end
+  
+  config.vm.provision :shell, :path => "provision/provision.sh"
 
 end
